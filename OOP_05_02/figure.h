@@ -6,6 +6,11 @@ class Figure
 public:
     Figure();
     
+    Figure(const Figure&) = delete;
+    Figure& operator=(const Figure&) = delete;
+    
+    virtual ~Figure() {}
+    
     std::string get_name() {return figure_name;}
     int get_sides_amount() {return sides_amount;}
     Side get_side_info(int side_number);
